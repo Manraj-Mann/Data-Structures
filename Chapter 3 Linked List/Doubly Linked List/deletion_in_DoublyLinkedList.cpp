@@ -123,11 +123,11 @@ int main()
 {
     dll *head;
 
-    dll *node1 = new dll[sizeof(dll)];
-    dll *node2 = new dll[sizeof(dll)];
-    dll *node3 = new dll[sizeof(dll)];
-    dll *node4 = new dll[sizeof(dll)];
-    dll *node5 = new dll[sizeof(dll)];
+    dll *node1 = new dll;
+    dll *node2 = new dll;
+    dll *node3 = new dll;
+    dll *node4 = new dll;
+    dll *node5 = new dll;
 
     head = node1;
     node1->data = 1;

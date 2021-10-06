@@ -81,11 +81,11 @@ int main()
 
     List *head;
 
-    List *node1 = new List[sizeof(List)];
-    List *node2 = new List[sizeof(List)];
-    List *node3 = new List[sizeof(List)];
-    List *node4 = new List[sizeof(List)];
-    List *node5 = new List[sizeof(List)];
+    List *node1 = new List;
+    List *node2 = new List;
+    List *node3 = new List;
+    List *node4 = new List;
+    List *node5 = new List;
 
     head = node1;
 

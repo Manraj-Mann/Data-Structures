@@ -24,7 +24,7 @@ void traverse(cll *head)
 void insert_at_end(cll **head, int data)
 {
 
-    cll *newnode = new cll[sizeof(cll)];
+    cll *newnode = new cll;
     newnode->data = data;
     cll *current = *head;
 
@@ -39,7 +39,7 @@ void insert_at_end(cll **head, int data)
 void mod_insert_at_end(cll **head, int data)
 {
 
-    cll *newnode = new cll[sizeof(cll)];
+    cll *newnode = new cll;
 
     if (!newnode)
     {
@@ -73,7 +73,7 @@ void insert_at_first(cll **head, int data)
 {
 
     cll *current = *head;
-    cll *newnode = new cll[sizeof(cll)];
+    cll *newnode = new cll;
 
     newnode->data = data;
     newnode->next = *head;
@@ -92,7 +92,7 @@ void mod_insert_at_first(cll **head, int data)
 {
 
     cll *current = *head;
-    cll *newnode = new cll[sizeof(cll)];
+    cll *newnode = new cll;
 
     if (!newnode)
     {
@@ -127,11 +127,11 @@ int main()
     cll *head = NULL;
     cll *node1, *node2, *node3, *node4, *node5;
 
-    node1 = new cll[sizeof(cll)];
-    node2 = new cll[sizeof(cll)];
-    node3 = new cll[sizeof(cll)];
-    node4 = new cll[sizeof(cll)];
-    node5 = new cll[sizeof(cll)];
+    node1 = new cll;
+    node2 = new cll;
+    node3 = new cll;
+    node4 = new cll;
+    node5 = new cll;
 
     node1->data = 1;
     node2->data = 2;

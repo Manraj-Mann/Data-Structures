@@ -57,7 +57,7 @@ void traverse(block *head)
 node *newnode(int data)
 {
 
-    node *newnode = new node[sizeof(node)];
+    node *newnode = new node;
     newnode->data = data;
     newnode->next = NULL;
     return newnode;
@@ -65,7 +65,7 @@ node *newnode(int data)
 block *newblock()
 {
 
-    block *newblock = new block[sizeof(node)];
+    block *newblock = new block;
     newblock->head = NULL;
     newblock->next = NULL;
     newblock->nodecount = 0;

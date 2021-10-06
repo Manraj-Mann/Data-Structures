@@ -38,7 +38,7 @@ void insert(List **head, int data, int position)
 
     int k = 1;
 
-    List *newnode = new List[sizeof(List)];
+    List *newnode = new List;
 
     if (!newnode)
     {
@@ -81,9 +81,8 @@ int main()
 
     List *head;
 
-    List *node1 = new List[sizeof(List)];
-    List *node2 = new List[sizeof(List)];
-
+    List *node1 = new List;
+    List *node2 = new List;
     head = node1;
 
     node1->data = 1;

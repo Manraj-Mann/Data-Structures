@@ -14,7 +14,7 @@ void create(node * ptr){
     while (n < num){
     
         cout<<"Enter data "<<n+1<<" node : ";cin>>ptr->data;
-        ptr->next = new node[sizeof(node)];
+        ptr->next = new node;
         ptr = ptr->next;
         n++;
     }
@@ -35,7 +35,7 @@ node * start;
 
 int main(){
 
-    start = new node[sizeof(node)];
+    start = new node;
 
     create(start);
     traverse(start);

@@ -25,11 +25,11 @@ int main()
     cll * head;
     cll * node1 , * node2 , * node3 , *node4 , *node5 ;
 
-    node1  = new cll[sizeof(cll)];
-    node2  = new cll[sizeof(cll)];
-    node3  = new cll[sizeof(cll)];
-    node4  = new cll[sizeof(cll)];
-    node5  = new cll[sizeof(cll)];
+    node1  = new cll;
+    node2  = new cll;
+    node3  = new cll;
+    node4  = new cll;
+    node5  = new cll;
 
     node1->data = 1;
     node2->data = 2;

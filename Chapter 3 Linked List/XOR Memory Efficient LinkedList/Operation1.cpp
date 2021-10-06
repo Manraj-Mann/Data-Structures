@@ -56,7 +56,7 @@ void insert(int data, bool at_last)
      //     if at_last - true = insert at last
     //        - false = insert at first
 
-    ll *newnode = new ll[sizeof(ll)];
+    ll *newnode = new ll;
     newnode->data = data;
 
     if (head == NULL) // If list is empty

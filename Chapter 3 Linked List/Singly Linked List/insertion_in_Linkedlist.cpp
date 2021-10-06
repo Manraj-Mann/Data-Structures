@@ -39,7 +39,7 @@ int Traverse(LinkedList *head)
 void insert_at_begin(List **head, int data)
 {
 
-    List *newnode = new List[sizeof(List)];
+    List *newnode = new List;
 
     newnode->data = data;
     newnode->next = *head;
@@ -54,7 +54,7 @@ void insert_at_last(List **head, int data)
 {
 
     LinkedList *current = *head;
-    List *newnode = new List[sizeof(List)];
+    List *newnode = new List;
 
     newnode->data = data;
     newnode->next = NULL;
@@ -73,7 +73,7 @@ void insert_at_given(List **head, int pos, int data)
 {
     LinkedList * current = *head;
 
-    List *newnode = new List[sizeof(List)];
+    List *newnode = new List;
     newnode->data = data;
     int i = 1;
     while ( i != pos-1)
@@ -96,8 +96,8 @@ int main()
 
     List *head;
 
-    List *node1 = new List[sizeof(List)];
-    List *node2 = new List[sizeof(List)];
+    List *node1 = new List;
+    List *node2 = new List;
 
     head = node1;
 

@@ -62,7 +62,7 @@ int Traverse(dll *head, int type)
 void insert_at_begin(dll **head, int data)
 {
 
-    dll *newnode = new dll[sizeof(dll)];
+    dll *newnode = new dll;
     newnode->data = data;
     newnode->next = *head;
     (*head)->prev = newnode;
@@ -73,7 +73,7 @@ void insert_at_begin(dll **head, int data)
 void insertion_at_end(dll **head, int data)
 {
 
-    dll *newnode = new dll[sizeof(dll)];
+    dll *newnode = new dll;
     dll *current = *head;
     newnode->data = data;
     newnode->next = NULL;
@@ -90,7 +90,7 @@ void insertion_at_end(dll **head, int data)
 void insertion_at_given(dll **head, int data, int pos)
 {
 
-    dll *newnode = new dll[sizeof(dll)];
+    dll *newnode = new dll;
     dll *current = *head;
     dll *q;
     newnode->data = data;
@@ -118,7 +118,7 @@ int main()
 
     dll *head;
 
-    dll *node1 = new dll[sizeof(dll)];
+    dll *node1 = new dll;
 
     head = node1;
     node1->data = 1;

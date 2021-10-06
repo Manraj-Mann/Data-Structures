@@ -52,7 +52,7 @@ int Traverse(dll *head, int type)
 void insertion(dll **head, int data, int pos)
 {
 
-    dll *newnode = new dll[sizeof(dll)];
+    dll *newnode = new dll;
     dll *current = *head;
 
     int k = 1;
@@ -114,8 +114,8 @@ int main()
 
     dll *head;
 
-    dll *node1 = new dll[sizeof(dll)];
-    dll *node2 = new dll[sizeof(dll)];
+    dll *node1 = new dll;
+    dll *node2 = new dll;
 
     head = node1;
     node1->data = 1;

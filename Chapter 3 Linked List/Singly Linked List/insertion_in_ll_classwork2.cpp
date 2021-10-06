@@ -11,13 +11,13 @@ node * start;
 node * create(){
     int num;
     cout<<"Total nodes = ";cin>>num;
-    start = new node[sizeof(node)];
+    start = new node;
     node * ptr = start;
     int n = 0;
     while (n < num){
     
         cout<<"Enter data "<<n+1<<" node : ";cin>>ptr->data;
-        ptr->next = new node[sizeof(node)];
+        ptr->next = new node;
         ptr = ptr->next;
         n++;
     }

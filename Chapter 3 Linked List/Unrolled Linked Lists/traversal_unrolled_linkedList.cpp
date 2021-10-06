@@ -63,19 +63,19 @@ int main(){
 
     nodesperb =  (int )(sqrt(m - 0.001))+1;
 
-    block * b1 = new block[sizeof(block)];
-    block * b2 = new block[sizeof(block)];
-    block * b3 = new block[sizeof(block)];
+    block * b1 = new block;
+    block * b2 = new block;
+    block * b3 = new block;
 
-    node * n1 = new node[sizeof(node)];
-    node * n2 = new node[sizeof(node)];
-    node * n3 = new node[sizeof(node)];
-    node * n4 = new node[sizeof(node)];
-    node * n5 = new node[sizeof(node)];
-    node * n6 = new node[sizeof(node)];
-    node * n7 = new node[sizeof(node)];
-    node * n8 = new node[sizeof(node)];
-    node * n9 = new node[sizeof(node)];
+    node * n1 = new node;
+    node * n2 = new node;
+    node * n3 = new node;
+    node * n4 = new node;
+    node * n5 = new node;
+    node * n6 = new node;
+    node * n7 = new node;
+    node * n8 = new node;
+    node * n9 = new node;
 
 
     b1->next = b2; 

@@ -57,7 +57,7 @@ void insert(int data, bool at_last)
     //     if at_last - true = insert at last
     //        - false = insert at first
 
-    ll *newnode = new ll[sizeof(ll)];
+    ll *newnode = new ll;
     newnode->data = data;
 
     if (head == NULL) // If list is empty
@@ -92,7 +92,7 @@ void insert(int data, bool at_last)
 
 void insert_at(int data, int position)
 {
-    ll* newnode = new ll[sizeof(ll)];
+    ll* newnode = new ll;
     newnode->data = data;
     ll *one_ahead = head;
     ll *one_behind;

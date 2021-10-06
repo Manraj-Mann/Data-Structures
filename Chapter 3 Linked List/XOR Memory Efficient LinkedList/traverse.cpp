@@ -35,10 +35,10 @@ int main()
 
     LL *node1, *node2, *node3, *node4;
 
-    node1 = new LL[sizeof(LL)];
-    node2 = new LL[sizeof(LL)];
-    node3 = new LL[sizeof(LL)];
-    node4 = new LL[sizeof(LL)];
+    node1 = new LL;
+    node2 = new LL;
+    node3 = new LL;
+    node4 = new LL;
 
     node1->data = 1;
     node2->data = 2;

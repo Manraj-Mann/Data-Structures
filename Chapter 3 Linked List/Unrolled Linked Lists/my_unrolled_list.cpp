@@ -25,7 +25,7 @@ LinkedBlock *blockhead;
 LinkedBlock *newLinkedBlock()
 {
 
-    LinkedBlock *block = new LinkedBlock[sizeof(LinkedBlock)];
+    LinkedBlock *block = new LinkedBlock;
     block->next = NULL;
     block->head = NULL;
     block->nodecount = 0;
@@ -36,7 +36,7 @@ LinkedBlock *newLinkedBlock()
 ListNode *newListNode(int value)
 {
 
-    ListNode *temp = new ListNode[sizeof(ListNode)];
+    ListNode *temp = new ListNode;
     temp->next = NULL;
     temp->value = value;
     return temp;
