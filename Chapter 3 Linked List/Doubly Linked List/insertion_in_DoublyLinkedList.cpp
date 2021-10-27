@@ -125,31 +125,32 @@ int main()
     node1->next = NULL;
     node1->prev = NULL;
 
-    cout << "As normal -> " << endl;
-    Traverse(head, 1);
-    cout << "As reverse -> " << endl;
-    Traverse(head, 0);
+    // cout << "As normal -> " << endl;
+    // Traverse(head, 1);
+    // cout << "As reverse -> " << endl;
+    // Traverse(head, 0);
 
-    insert_at_begin(&head, 0);
+    // insert_at_begin(&head, 0);
 
-    cout << "As normal -> " << endl;
-    Traverse(head, 1);
-    cout << "As reverse -> " << endl;
-    Traverse(head, 0);
+    // cout << "As normal -> " << endl;
+    // Traverse(head, 1);
+    // cout << "As reverse -> " << endl;
+    // Traverse(head, 0);
 
-    insertion_at_end(&head, 100);
+    insertion_at_end(&head, 2 ) ;
+    insertion_at_end(&head, 3);
 
-    cout << "As normal -> " << endl;
-    Traverse(head, 1);
-    cout << "As reverse -> " << endl;
-    Traverse(head, 0);
+    // cout << "As normal -> " << endl;
+    // Traverse(head, 1);
+    // cout << "As reverse -> " << endl;
+    // Traverse(head, 0);
 
     insertion_at_given(&head, 50 , 2);
 
     cout << "As normal -> " << endl;
     Traverse(head, 1);
-    cout << "As reverse -> " << endl;
-    Traverse(head, 0);
+    // cout << "As reverse -> " << endl;
+    // Traverse(head, 0);
 
     return 0;
 }
