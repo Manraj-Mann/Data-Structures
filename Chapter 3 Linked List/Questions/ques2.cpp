@@ -35,12 +35,12 @@ bool Floyd_cycle(node * head){
 
     while (sptr != NULL && fptr != NULL && fptr->next != NULL)
     {
+        sptr = sptr->next;
+        fptr = fptr->next->next;
         if (sptr == fptr)
         {
             return 1;
         }
-        sptr = sptr->next;
-        fptr = fptr->next->next;
         
     }
 
