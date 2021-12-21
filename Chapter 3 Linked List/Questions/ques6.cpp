@@ -87,10 +87,51 @@ node *find_merge(node *head1, node *head2)
         stack1.pop();
         stack2.pop();
     }
-    
+
     return ptr;
+}
 
+int efficient(node *head1, node *head2)
+{
+    node *ptr1 = head1, *ptr2 = head2;
 
+    int l1 = 0, l2 = 0;
+
+    // Finding lengths of lists
+
+    while (ptr1 != NULL)
+    {
+        ptr1 = ptr1->next;
+        l1++;
+    }
+    while (ptr2 != NULL)
+    {
+        ptr2 = ptr2->next;
+        l2++;
+    }
+
+    // CHoosing list to cover d nodes ( d = l2 - l1 or l1 - l2 but +ve)
+
+    ptr1 = (l1 > l2) ? head1 : head2;
+    ptr2 = (ptr1 == head1)? head2 : head1;
+
+    // Iterated list
+
+    for (int i = 0; i < abs(l1-l2); i++)
+    {
+        ptr1 = ptr1->next;
+    }
+    // FInding merge points
+
+    while (ptr1 != ptr2)
+    {
+        ptr1 = ptr1->next;
+        ptr2 = ptr2->next;
+    }
+
+    return ptr1->data;
+    
+    
 }
 int main()
 {
@@ -160,16 +201,82 @@ int main()
 
     if (ptr == NULL)
     {
-         cout << "\nNot merging\n";
+        cout << "\nNot merging\n";
     }
-    else{
+    else
+    {
 
         cout << "\nmerging at - " << ptr->data;
     }
-    
+
     // Time Complexity: O(m + n), for scanning both the lists.
     // Space Complexity: O(m + n), for creating two stacks for both the lists.
 
+    //---------------------------------  find the first repeating element ------------------ //
+
+    vector<int> elements;
+    node *ptr1 = head, *ptr2 = head2;
+
+    // Pushing in all the elements in the array
+
+    while (ptr1 != NULL)
+    {
+        elements.push_back(ptr1->data);
+        ptr1 = ptr1->next;
+    }
+    while (ptr2 != NULL)
+    {
+        elements.push_back(ptr2->data);
+        ptr2 = ptr2->next;
+    }
+    int max = elements[0];
+
+    // Find the maximim lengh of the array
+    for (int i = 1; i < elements.size(); i++)
+    {
+        if (max < elements[i])
+        {
+            max = elements[i];
+        }
+    }
+
+    // finding first repeating element
+
+    vector<int> number(max + 1, 0);
+
+    for (int i = 0; i < elements.size(); i++)
+    {
+        if (number[elements[i]] == 1)
+        {
+            max = elements[i];
+            break;
+        }
+        else
+        {
+
+            number[elements[i]]++;
+        }
+    }
+
+    std::cout << "\nRepeated at - " << max << std::endl;
+
+    // Time Complexity: O(m + n). Space Complexity: O(m + n).
+
+    // Improvements =
+    // • Create an array A and keep all the next pointers of the first list in the array.
+    // • Sort these array elements.
+    // • Then, for each of the second list elements, search in the sorted array (let us assume
+    // that we are using binary search which gives O(logn)).
+    // • Since we are scanning the second list one by one, the first repeating element that
+    // appears in the array is nothing but the merging point.
+
+    // Time for sorting + Time for searching = O(Max(mlogm, nlogn)). Space Complexity: O(Max(m, n)).
+
+    //---------------------------------  Efficient Approach  ------------------ //
+
+    cout<<"merging at = "<<efficient(head , head2);
+
+    
 
     return 0;
 }
