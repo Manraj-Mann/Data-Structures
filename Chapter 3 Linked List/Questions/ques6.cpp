@@ -276,7 +276,7 @@ int main()
 
     cout<<"merging at = "<<efficient(head , head2);
 
-    
+    // Total time complexity = O(max(m, n)). Space Complexity = O(1).
 
     return 0;
 }
