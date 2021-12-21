@@ -158,5 +158,8 @@ int main()
 
     traverse(newlist);
 
+
+    // Time Complexity: O(n + m), where n and m are lengths of two lists
+
     return 0;
 }
