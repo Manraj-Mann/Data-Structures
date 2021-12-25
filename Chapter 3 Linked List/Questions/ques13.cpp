@@ -2,62 +2,90 @@
  If the number of nodes in the list are odd then make first list one node extra than second list.*/
 
 #include <iostream>
+#include <stack>
 using namespace std;
 struct node
 {
     int data;
     node *next;
 };
-
-void spit_list(node * head  , node * & list1 ,  node * & list2){
-
-    node * fptr = head;
-    node * sptr = head;
+bool is_palin(node *head)
+{
+    stack<node *> str;
+    node * mid = NULL;
+    node *fptr = head;
+    node *sptr = head;
+    str.push(sptr);
 
     while (1)
     {
+        // mid = sptr;
+
         sptr = sptr->next;
+        str.push(sptr);
         fptr = fptr->next->next;
 
         if (fptr->next->next == head)
         {
+            //mid = sptr;
+          
+        
             fptr = fptr->next;
             break;
         }
-        if ( fptr->next == head)
+        if (fptr->next == head)
         {
+          
+            str.pop();
             break;
-            
         }
-            
     }
 
-    // std::cout<<"fptr = "<<fptr->data;
-    // std::cout<<"sptr = "<<sptr->data;
+    //  std::cout<<"\nfptr = "<<fptr->data;
+    //  std::cout<<"\nsptr = "<<sptr->next->data;
 
-    fptr->next = sptr->next;
-    sptr->next = head;
+    sptr = sptr->next;
+    //  std::cout<<"\nmid = "<<mid->data;
 
 
-    list1 = sptr->next;
+   
+    while (!str.empty())
+    {
+       
+       if (sptr->data != str.top()->data)
+       {
+           return 0;
+       }
+       
+        str.pop();
+        sptr = sptr->next;
+    }
 
-    list2 = fptr->next;
+   
+    return 1;
+    
+
+    
+
+    
 
 }
-void traverse(node * head){
-    node * ptr = head;
+
+
+void traverse(node *head)
+{
+    node *ptr = head;
 
     while (1)
     {
-        std::cout<<ptr->data<<" ";
+        std::cout << ptr->data << " ";
         ptr = ptr->next;
         if (ptr == head)
         {
             break;
         }
-        
     }
-    std::cout<<std::endl;
+    std::cout << std::endl;
 }
 int main()
 {
@@ -81,28 +109,29 @@ int main()
     node3->data = 3;
     node3->next = node4;
 
-    node4->data = 11;
+    node4->data = 1;
     node4->next = node5;
 
-    node5->data = 22;
+    node5->data = 3;
     node5->next = node6;
 
-    node6->data = 33;
-    node6->next = node1;
+    node6->data = 2;
+    node6->next = node7;
 
-    node7->data = 44;
+    node7->data = 1;
     node7->next = node1;
 
     head = node1;
 
-    node * new1 = NULL, * new2 = NULL;
+    if (is_palin(head))
+    {
+        std::cout << "list is palindrome\n";
+    }
+    else
+    {
 
-    spit_list(head , new1 , new2);
-
-    std::cout<<"List 1 = ";traverse(new1);
-    std::cout<<"List 2 = ";traverse(new2);
-
-
+        std::cout << "list is not palindrome\n";
+    }
 
     return 0;
 }
