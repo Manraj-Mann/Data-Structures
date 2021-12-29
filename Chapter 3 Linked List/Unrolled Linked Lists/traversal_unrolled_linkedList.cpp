@@ -110,7 +110,7 @@ int main(){
      b2->head = n4;
      b3->head = n7;
 
-    cout<<"The elements are : ";
+    //cout<<"The elements are : ";
     traverse(head);
 
     
