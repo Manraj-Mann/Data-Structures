@@ -3,6 +3,11 @@ Contatining all the data structures available in detail as per book DSA made eas
 
 # Index
 
-### Chapter 2  Linked Lists
+### [Chapter 2  Linked Lists](#linked-lists)
 
-### Chapter 2 Stacks
+### [Chapter 3 Stacks](#stacks)
+
+
+# Linked Lists
+
+# Stacks
