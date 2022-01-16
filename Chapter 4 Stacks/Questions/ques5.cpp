@@ -1,4 +1,4 @@
-// Discuss how stacks can be used for checking balancing of symbols.
+// How to design a stack such that GetMinimum( ) should be O(1)?
 
 #include <iostream>
 #include <climits>
@@ -7,19 +7,18 @@ using namespace std;
 class Stack
 {
 private:
+
     int m_top = -1;
     int capacity;
-    char *arr;
+    int *arr;
 
 public:
     Stack() {}
 
     void resize()
-    
     {
-
-        char *arr_old = arr;
-        arr = new char[2 * capacity];
+        int *arr_old = arr;
+        arr = new int[2 * capacity];
 
         for (int i = 0; i <= capacity; i++)
         {
@@ -33,14 +32,16 @@ public:
     Stack(int cap)
     {
         capacity = cap;
-        arr = new char[cap];
+        arr = new int[cap];
+
     }
 
-    Stack *create(int cap)
+    void create(int cap)
     {
 
         capacity = cap;
-        arr = new char[cap];
+        arr = new int[cap];
+ 
     }
 
     void push(int data)
@@ -53,9 +54,10 @@ public:
         }
 
         // cout<<"Pushed "<<data<<endl;
+        
         arr[m_top] = data;
     }
-    char pop()
+    int pop()
     {
 
         if (isempty())
@@ -63,7 +65,7 @@ public:
             std::cout << "Stack Underflow";
             return CHAR_MAX;
         }
-
+        
         return arr[m_top--];
     }
 
@@ -93,7 +95,7 @@ public:
         delete[] arr;
     }
 
-    char top()
+    int top()
     {
 
         return arr[m_top];
@@ -109,70 +111,74 @@ public:
 
         cout << endl;
     }
+
 };
 
-int check_paren(string &str)
-{
+class advancedstack{
 
-    Stack s(str.size());
+    private:
 
-    for (int i = 0; i < str.size(); i++)
-    {
-        if (str[i] == '(' || str[i] == '{' || str[i] == '[')
-        {
-            s.push(str[i]);
-        }
+    Stack * normalstack;
+    Stack * minimum;
 
-        if (str[i] == ')' || str[i] == '}' || str[i] == ']')
-        {
-            if (s.isempty() == 1 )
-            {
-                return i;
-            }
-            else if((str[i] == ')' && s.top()=='(') ||(str[i] == '}' && s.top() =='{' )|| ( str[i] == ']' && s.top()== '[')){
+    public:
 
-                s.pop();
+    advancedstack(int size){
 
-            }
-            else 
-            {
-                return i;
-            }
-        }
+        normalstack = new Stack(size);
+        minimum = new Stack(size);
     }
 
-    if (s.isempty() != 1)
-    {
-        return 0;
+    void push(int data){
+
+        normalstack->push(data);
+        if (minimum->isempty())
+        {
+            minimum->push(data);
+        }
+        else
+        {
+            if (minimum->top() > data)
+            {
+                minimum->push(data);
+            }
+            else
+            {
+
+                minimum->push(minimum->top());
+            }
+            
+        }     
+        
     }
 
+    void pop(){
 
-    return INT_MAX;
-}
+        normalstack->pop();
+        minimum->pop();
+    }
 
+    int getmin(){
+
+        return minimum->top();
+    }
+
+};
 int main()
 {
+    int i = 1;
+    advancedstack st(6);
 
-    string str;
-   // std::cin >> str;
+    st.push(10);
+    st.push(12);
+    st.push(-1);
+    st.push(-19);
+    st.push(20);
 
-    //str = "(A+B)+(C-D)";
-    // str = "((A+B)+(C+D)";
-    // str = "((A+B)+[C-D])";
-    str = "((A+B)+[C-D]}";
-
-    int n = check_paren(str);
-    if (n == INT_MAX)
+    for (int i = 0; i < 4; i++)
     {
-        std::cout << "Balanced\n";
+        cout<<st.getmin()<<endl;
+        st.pop();
     }
-    else
-    {
-
-        std::cout << "UNBALANCED \n";
-    }
-
-    return 0;
+    
 }
-
-//Time Complexity: O(n). Since we are scanning the input only once. Space Complexity: O(n) [for stack].
