@@ -12,7 +12,8 @@ Contatining all the data structures available in detail as per book DSA made eas
 
 - [Singly Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Singly%20Linked%20List)
 - [Doubly Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Doubly%20Linked%20List)
-- [Circular Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Circular%20LinkedList)
+- [Circular Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Circular%20LinkedList)          ![image](https://user-images.githubusercontent.com/81899682/149673271-6fc2b68e-063e-435b-9863-618a44f94641.png)
+
 - [Xor Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/XOR%20Memory%20Efficient%20LinkedList)
 - [Unrolled Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Unrolled%20Linked%20Lists)
 - [Skip Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Skip%20Lists)
