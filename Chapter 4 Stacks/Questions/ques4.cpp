@@ -1,7 +1,5 @@
 // Can we evaluate the infix expression with stacks in one pass?
 
-
-
 #include <iostream>
 #include <climits>
 using namespace std;
@@ -109,6 +107,34 @@ public:
         cout << endl;
     }
 };
+int operator_precedence(char c)
+{
+
+    if (c == '*')
+    {
+        return 3;
+    }
+    else if (c == '+')
+    {
+
+        return 1;
+    }
+    else if (c == '-')
+    {
+
+        return 2;
+    }
+    else if (c == '/')
+    {
+
+        return 4;
+    }
+    else if (c == '(')
+    {
+
+        return 0;
+    }
+}
 
 bool isoperator(char c)
 {
@@ -121,34 +147,92 @@ bool isoperator(char c)
 }
 
 // for binary operators
+void procedure(Stack &operand, Stack &operator_)
+{
 
-int evaluate_infix(string &str){
+    int num1 = (int)operand.pop() - '0';
+    int num2 = (int)operand.pop() - '0';
+    char opr = operator_.pop();
 
+    int res;
 
-    Stack oprand(str.size());
+    //cout<<"res = "<<num2<<" "<<opr<<" "<<num1<<endl;
+    switch (opr)
+    {
+    case '+':
+        res = num2 + num1;
+        break;
+    case '-':
+        res = num2 - num1;
+        break;
+    case '*':
+        res = num2 * num1;
+        break;
+    case '/':
+        res = num2 / num1;
+        break;
+    }
+    char r = res + '0';
+    operand.push(r);
+    //cout<<"pushed : "<<operand.top()<<endl;
+
+}
+int evaluate_infix(string &str)
+{
+
     Stack operator_(str.size());
+    Stack operand(str.size());
 
     for (int i = 0; i < str.size(); i++)
     {
-        
+        char next = str[i];
+
+        if (!isoperator(next))
+        {
+            operand.push(next);
+            //cout<<"pushed : "<<operand.top()<<endl;
+        }
+        else if(next == '('){
+
+            operator_.push(next);
+        }
+        else if (next == ')')
+        {
+            while (operator_.top() != '(')
+            {
+
+                procedure(operand, operator_);
+            }
+            operator_.pop();
+        }
+        else
+        {
+
+            while ((operator_precedence(operator_.top()) > operator_precedence(next)) && operator_.isempty() != 1)
+            {
+
+                procedure(operand, operator_);
+            }
+            operator_.push(next);
+        }
     }
-    
 
+    while (operator_.isempty() != 1)
+    {
+        procedure(operand, operator_);
+    }
 
-
-
-
-
+    return (int)operand.pop() - '0';
 }
-
 
 int main()
 {
 
-// Using 2 stacks we can evaluate an infix expression in 1 pass without converting to
-// postfix.
-    string str = "123*+5-";
+    // Using 2 stacks we can evaluate an infix expression in 1 pass without converting to
+    // postfix.
+    string str = "(1/(5-4+0))*(3-1)*4";
 
- 
+    cout << evaluate_infix(str);
+
     return 0;
 }
