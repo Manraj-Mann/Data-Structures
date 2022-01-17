@@ -86,5 +86,24 @@ A queue is an ordered list in which insertions are done at one end (rear) and
 deletions are done at other end (front). The first element to be inserted is the first one to be
 deleted. Hence, it is called First in First out (FIFO) or Last in Last out (LILO) list.
 
+# Applications
+
+> Following are some of the applications that use queues.
+
+Direct Applications
+
+- Operating systems schedule jobs (with equal priority) in the order of arrival (e.g., a
+print queue).
+- Simulation of real-world queues such as lines at a ticket counter or any other firstcome first-served scenario requires a queue.
+- Multiprogramming.
+- Asynchronous data transfer (file IO, pipes, sockets).
+- Waiting times of customers at call center.
+- Determining number of cashiers to have at a supermarket.
+
+Indirect Applications
+
+- Auxiliary data structure for algorithms
+- Component of other data structures
+
 
 
