@@ -27,3 +27,7 @@ Contatining all the data structures available in detail as per book DSA made eas
 - [Array Implementation]()
 - [Dynamic Array Implementation (Resizable)]()
 - [Linked List Implementation]()
+
+> [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%204%20Stacks/Questions)  
+
+
