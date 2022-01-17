@@ -22,6 +22,8 @@ This repository is contatining all the data structures available in detail as pe
 3. [Chapter 3 Stacks](#stacks)
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Linked Lists
 
 A linked list is a data structure used for storing collections of data. A linked list has the following
@@ -40,6 +42,9 @@ allocates memory as list grows.
 
 > [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Questions)  
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Stacks
 
 Definition: A stack is an ordered list in which insertion and deletion are done at one end, called
@@ -54,6 +59,7 @@ top. The last element inserted is the first one to be deleted. Hence, it is call
 
 > [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%204%20Stacks/Questions)  
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Queues
 
 A queue is an ordered list in which insertions are done at one end (rear) and
