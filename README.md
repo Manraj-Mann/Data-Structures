@@ -94,7 +94,7 @@ Direct Applications
 
 - Operating systems schedule jobs (with equal priority) in the order of arrival (e.g., a
 print queue).
-- Simulation of real-world queues such as lines at a ticket counter or any other firstcome first-served scenario requires a queue.
+- Simulation of real-world queues such as lines at a ticket counter or any other first come first-served scenario requires a queue.
 - Multiprogramming.
 - Asynchronous data transfer (file IO, pipes, sockets).
 - Waiting times of customers at call center.
