@@ -111,8 +111,20 @@ int main()
     q.getpos();
 
     q.enqueue(5);
-    
+
     cout << q.front_() << endl;
+
+
+/*
+Space Complexity (for n EnQueue operations) O(n)
+Time Complexity of EnQueue() O(1)
+Time Complexity of DeQueue() O(1)
+Time Complexity of IsEmptyQueue() O(1)
+Time Complexity of IsFullQueue() O(1)
+Time Complexity of QueueSize() O(1)
+Time Complexity of DeleteQueue() O(1)
+
+*/ 
 
     return 0;
 }
