@@ -93,7 +93,7 @@ deleted. Hence, it is called First in First out (FIFO) or Last in Last out (LILO
 
 ![image](https://user-images.githubusercontent.com/81899682/149733271-c9348b0f-d96f-44cf-91d2-6a5e34bdfb28.png)
 
-> [Practise Questions with solutions (Including Interview Questions)]()  
+> [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%205%20Queues/Questions)  
 
 
 # Applications
