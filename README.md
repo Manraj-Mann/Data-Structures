@@ -18,9 +18,9 @@ This repository is contatining all the data structures available in detail as pe
 # Table of Contents
 
 1. [Chapter 1 Introduction]()
-2. [Chapter 2  Linked Lists](#linked-lists)
+2. [Chapter 2 Linked Lists](#linked-lists)
 3. [Chapter 3 Stacks](#stacks)
-
+4. [Chpater 4 Queues](#queues)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -86,6 +86,14 @@ A queue is an ordered list in which insertions are done at one end (rear) and
 deletions are done at other end (front). The first element to be inserted is the first one to be
 deleted. Hence, it is called First in First out (FIFO) or Last in Last out (LILO) list.
 
+- [Simple Array Implementation](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/simpleArrayImplementation.cpp)
+- [Circular Array Implementation](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/circularArrayImplementation.cpp)
+
+![image](https://user-images.githubusercontent.com/81899682/149733271-c9348b0f-d96f-44cf-91d2-6a5e34bdfb28.png)
+
+> [Practise Questions with solutions (Including Interview Questions)]()  
+
+
 # Applications
 
 > Following are some of the applications that use queues.
@@ -104,6 +112,4 @@ Indirect Applications
 
 - Auxiliary data structure for algorithms
 - Component of other data structures
-
-
 
