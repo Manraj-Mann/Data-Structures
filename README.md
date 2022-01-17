@@ -108,9 +108,7 @@ Indirect Applications
 - Auxiliary data structure for algorithms
 - Component of other data structures
 
-![image](https://user-images.githubusercontent.com/81899682/149732851-d195597c-6713-44d3-98dc-f7f21d8c2517.png)
-
-![image](https://user-images.githubusercontent.com/81899682/149732996-126910e2-8bfd-4d10-bdcb-1919b7d3f750.png)
+![image](https://user-images.githubusercontent.com/81899682/149733271-c9348b0f-d96f-44cf-91d2-6a5e34bdfb28.png)
 
 
 
