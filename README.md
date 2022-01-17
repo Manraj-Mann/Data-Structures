@@ -24,6 +24,10 @@ This repository is contatining all the data structures available in detail as pe
 
 # Linked Lists
 
+A linked list is a data structure used for storing collections of data. A linked list has the following
+properties.Successive elements are connected by pointers , last element points to NULL , can grow or shrink in size during execution of a program , can be made just as long as required (until systems memory exhausts) and does not waste memory space (but takes some extra memory for pointers). It
+allocates memory as list grows.
+
 - [Singly Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Singly%20Linked%20List)
 - [Doubly Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Doubly%20Linked%20List)
 - [Circular Linked Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Circular%20LinkedList)                    
@@ -37,6 +41,10 @@ This repository is contatining all the data structures available in detail as pe
 > [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Questions)  
 
 # Stacks
+
+Definition: A stack is an ordered list in which insertion and deletion are done at one end, called
+top. The last element inserted is the first one to be deleted. Hence, it is called the Last in First out
+(LIFO) or First in Last out (FILO) list.
 
 - [Array Implementation]()
 - [Dynamic Array Implementation (Resizable)]()                                                                                           
