@@ -17,12 +17,28 @@ public:
         arr = new int[size];
     }
 
+    void resize(){
+
+        int * old_arr = arr;
+
+        arr = new int[2*size];
+
+        for ( int i = 0; i < size; i++)
+        {
+            arr[i] = old_arr[i];
+        }
+
+        size *= 2;
+        
+    }
+
     void enqueue(int data)
     {
 
         if (full())
         {
-            return;
+
+            resize();
         }
 
         rear = (rear + 1) % size;
@@ -33,7 +49,6 @@ public:
     {
         if ((rear + 1) % size == front)
         {
-            cout << "full\n";
             return 1;
         }
         return 0;
@@ -48,8 +63,6 @@ public:
         }
         front = (front + 1) % size;
         int data = arr[front];
-        
-        return data;
     }
 
     bool empty()
@@ -86,47 +99,44 @@ int main()
 {
     queue q(4);
 
-    q.dequeue(); // empty
+   q.enqueue(1);
+   q.enqueue(2);
+   q.enqueue(3);
+   q.enqueue(4);
+   q.enqueue(5);
+   q.enqueue(6);
+   q.enqueue(7);
 
-    q.enqueue(1); // valid 
+   cout<<q.front_()<<endl;
 
-    q.enqueue(2); // valid
+   q.getpos();
 
-    q.enqueue(3); // valid
+   q.dequeue(); //1
+   cout<<q.front_()<<endl;
+   q.dequeue();//2
+   cout<<q.front_()<<endl;
+   q.dequeue();//3
+   cout<<q.front_()<<endl;
+   q.dequeue();//4
+   cout<<q.front_()<<endl;
+   q.dequeue();//5
+   cout<<q.front_()<<endl;
+   q.dequeue();//6
+   cout<<q.front_()<<endl;
+   q.dequeue();//7
 
-    q.enqueue(4); // full
-
-    cout << q.front_() << endl; // 1
-
-    q.enqueue(5); // full
-
-    q.dequeue(); // valid
-
-    cout << q.front_() << endl; // 2
-    q.dequeue();
-    cout << q.front_() << endl; //3
-    q.dequeue();
-    cout << q.front_() << endl; // -1 empty
-
-    q.dequeue(); // empty
-
-    q.getpos();
-
-    q.enqueue(5);
-
-    cout << q.front_() << endl;
+   cout<<q.front_()<<endl; // empty -1
+   q.dequeue(); // empty
+   cout<<q.front_()<<endl; //empty -1
 
 
-/*
-Space Complexity (for n EnQueue operations) O(n)
-Time Complexity of EnQueue() O(1)
-Time Complexity of DeQueue() O(1)
-Time Complexity of IsEmptyQueue() O(1)
-Time Complexity of IsFullQueue() O(1)
-Time Complexity of QueueSize() O(1)
-Time Complexity of DeleteQueue() O(1)
+   q.enqueue(10);
+   q.enqueue(11);
+   cout<<q.front_()<<endl; //10
+   q.dequeue();//10
+   cout<<q.front_()<<endl;//11
 
-*/ 
 
     return 0;
+
 }
