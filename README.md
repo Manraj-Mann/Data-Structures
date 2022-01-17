@@ -59,6 +59,26 @@ top. The last element inserted is the first one to be deleted. Hence, it is call
 
 > [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%204%20Stacks/Questions)  
 
+# Applications
+
+> Following are some of the applications in which stacks play an important role.
+
+Direct applications
+- Balancing of symbols
+- Infix-to-postfix conversion
+- Evaluation of postfix expression
+- Implementing function calls (including recursion)
+- Finding of spans (finding spans in stock markets, refer to Problems section)
+- Page-visited history in a Web browser [Back Buttons]
+- Undo sequence in a text editor
+- Matching Tags in HTMLand XML
+
+Indirect applications
+- Auxiliary data structure for other algorithms (Example: Tree traversal algorithms)
+- Component of other data structures (Example: Simulating queues, refer Queues
+chapter)
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Queues
 
