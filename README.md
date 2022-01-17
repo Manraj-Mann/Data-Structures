@@ -54,4 +54,11 @@ top. The last element inserted is the first one to be deleted. Hence, it is call
 
 > [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%204%20Stacks/Questions)  
 
+# Queues
+
+A queue is an ordered list in which insertions are done at one end (rear) and
+deletions are done at other end (front). The first element to be inserted is the first one to be
+deleted. Hence, it is called First in First out (FIFO) or Last in Last out (LILO) list.
+
+
 
