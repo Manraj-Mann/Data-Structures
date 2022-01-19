@@ -20,7 +20,8 @@ This repository is contatining all the data structures available in detail as pe
 1. [Chapter 1 Introduction]()
 2. [Chapter 2 Linked Lists](#linked-lists)
 3. [Chapter 3 Stacks](#stacks)
-4. [Chpater 4 Queues](#queues)
+4. [Chapter 4 Queues](#queues)
+5. [Chapter 5 Trees](#trees)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -38,8 +39,8 @@ allocates memory as list grows.
 - [Skip Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Skip%20Lists)
 
  ![image](https://user-images.githubusercontent.com/81899682/149673271-6fc2b68e-063e-435b-9863-618a44f94641.png)
-
-
+ 
+ 
 > [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Questions)  
 
 
@@ -117,3 +118,17 @@ Indirect Applications
 - Auxiliary data structure for algorithms
 - Component of other data structures
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Trees
+
+A tree is a data structure similar to a linked list but instead of each node pointing simply to the next node in a linear fashion, each node points to a number of nodes. Tree is an example of a non-linear data structure. A tree structure is a way of representing the hierarchical nature of a structure in a graphical form.
+
+In trees ADT (Abstract Data Type), the order of the elements is not important. If we need ordering
+information, linear data structures like linked lists, stacks, queues, etc. can be used.
+
+
+![image](https://user-images.githubusercontent.com/81899682/150085325-cbc5c9c4-afa8-4c5e-851f-36691674d481.png)
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
