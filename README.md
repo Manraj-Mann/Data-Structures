@@ -90,6 +90,8 @@ deleted. Hence, it is called First in First out (FIFO) or Last in Last out (LILO
 - [Circular Array Implementation](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/circularArrayImplementation.cpp)
 - [Dynamic Circular Array Implementation](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/dynamicCircularArrayImplementation.cpp)
 - [Linked List Implementation](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/linkedListImplementation.cpp)
+- [Double Ended Queue](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/double_ended_queue.cpp)
+- [Dynamic Circular Double Ended Queue](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/dynamic_circular_double_ended_queue.cpp)
 
 ![image](https://user-images.githubusercontent.com/81899682/149733271-c9348b0f-d96f-44cf-91d2-6a5e34bdfb28.png)
 
