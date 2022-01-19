@@ -4,6 +4,21 @@
         "deque": "cpp",
         "vector": "cpp",
         "array": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "memory": "cpp",
+        "sstream": "cpp",
+        "valarray": "cpp",
+        "ciso646": "cpp",
+        "forward_list": "cpp",
+        "functional": "cpp",
+        "regex": "cpp",
+        "type_traits": "cpp",
+        "tuple": "cpp"
     }
 }

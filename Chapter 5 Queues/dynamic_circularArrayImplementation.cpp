@@ -63,6 +63,7 @@ public:
         }
         front = (front + 1) % size;
         int data = arr[front];
+        return data;
     }
 
     bool empty()

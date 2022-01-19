@@ -2,52 +2,69 @@
 
 #include <iostream>
 #include <stack>
+using namespace std;
 
-class queue
+class queue_
 {
 private:
     stack<int> enqueue_;
     stack<int> dequeue_;
-public:
-    queue();
 
-    void enqueue(int data){
+public:
+    void enqueue(int data)
+    {
 
         enqueue_.push(data);
     }
 
-    int dequeue(){
+    int dequeue()
+    {
+
         int data;
+        if (enqueue_.empty() && dequeue_.empty())
+        {
+            cout << "Empty\n";
+            return -1;
+        }
+
         if (!dequeue_.empty())
         {
             data = dequeue_.top();
+            dequeue_.pop();
             return data;
         }
-        else{
-
+        else
+        {
             while (!enqueue_.empty())
             {
                 dequeue_.push(enqueue_.top());
                 enqueue_.pop();
-
             }
 
             data = dequeue_.top();
+            dequeue_.pop();
             return data;
-            
         }
-        
     }
-   
 };
 
+int main()
+{
 
+    queue_ q;
 
+    q.dequeue();
 
-using namespace std;
+    q.enqueue(1);
+    q.enqueue(2);
+    q.enqueue(3);
+    q.enqueue(4);
 
-int main(){
-    
+    cout << q.dequeue()<<endl;
+    cout << q.dequeue()<<endl;
+    cout << q.dequeue()<<endl;
+    cout << q.dequeue()<<endl;
+    cout << q.dequeue()<<endl;
 
-return 0;
+    return 0;
 }
