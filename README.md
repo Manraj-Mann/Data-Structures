@@ -130,5 +130,21 @@ information, linear data structures like linked lists, stacks, queues, etc. can 
 
 ![image](https://user-images.githubusercontent.com/81899682/150085325-cbc5c9c4-afa8-4c5e-851f-36691674d481.png)
 
+## 1.Binary Trees
+A tree is called binary tree if each node has zero child, one child or two children. Empty tree is also a valid binary tree. We can visualize a binary tree as consisting of a root and two disjoint binary trees, called the left and right subtrees of the root.
+
+
+## Applications of Binary Trees
+
+> Following are the some of the applications where binary trees play an important role:
+
+- Expression trees are used in compilers.
+- Huffman coding trees that are used in data compression algorithms.
+- Binary Search Tree (BST), which supports search, insertion and deletion on a
+collection of items in O(logn) (average).
+- Priority Queue (PQ), which supports search and deletion of minimum (or maximum)
+on a collection of items in logarithmic time (in worst case).
+
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
