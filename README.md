@@ -20,7 +20,8 @@ This repository is contatining all the data structures available in detail as pe
 1. [Chapter 1 Introduction]()
 2. [Chapter 2 Linked Lists](#linked-lists)
 3. [Chapter 3 Stacks](#stacks)
-4. [Chpater 4 Queues](#queues)
+4. [Chapter 4 Queues](#queues)
+5. [Chapter 5 Trees](#trees)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -38,8 +39,8 @@ allocates memory as list grows.
 - [Skip Lists](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Skip%20Lists)
 
  ![image](https://user-images.githubusercontent.com/81899682/149673271-6fc2b68e-063e-435b-9863-618a44f94641.png)
-
-
+ 
+ 
 > [Practise Questions with solutions (Including Interview Questions)](https://github.com/Manraj-Mann/Data-Sructures/tree/main/Chapter%203%20Linked%20List/Questions)  
 
 
@@ -90,6 +91,8 @@ deleted. Hence, it is called First in First out (FIFO) or Last in Last out (LILO
 - [Circular Array Implementation](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/circularArrayImplementation.cpp)
 - [Dynamic Circular Array Implementation](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/dynamicCircularArrayImplementation.cpp)
 - [Linked List Implementation](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/linkedListImplementation.cpp)
+- [Double Ended Queue](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/double_ended_queue.cpp)
+- [Dynamic Circular Double Ended Queue](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%205%20Queues/dynamic_circular_double_ended_queue.cpp)
 
 ![image](https://user-images.githubusercontent.com/81899682/149733271-c9348b0f-d96f-44cf-91d2-6a5e34bdfb28.png)
 
@@ -115,3 +118,33 @@ Indirect Applications
 - Auxiliary data structure for algorithms
 - Component of other data structures
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Trees
+
+A tree is a data structure similar to a linked list but instead of each node pointing simply to the next node in a linear fashion, each node points to a number of nodes. Tree is an example of a non-linear data structure. A tree structure is a way of representing the hierarchical nature of a structure in a graphical form.
+
+In trees ADT (Abstract Data Type), the order of the elements is not important. If we need ordering
+information, linear data structures like linked lists, stacks, queues, etc. can be used.
+
+
+![image](https://user-images.githubusercontent.com/81899682/150085325-cbc5c9c4-afa8-4c5e-851f-36691674d481.png)
+
+## 1.Binary Trees
+A tree is called binary tree if each node has zero child, one child or two children. Empty tree is also a valid binary tree. We can visualize a binary tree as consisting of a root and two disjoint binary trees, called the left and right subtrees of the root.
+
+
+## Applications of Binary Trees
+
+> Following are the some of the applications where binary trees play an important role:
+
+- Expression trees are used in compilers.
+- Huffman coding trees that are used in data compression algorithms.
+- Binary Search Tree (BST), which supports search, insertion and deletion on a
+collection of items in O(logn) (average).
+- Priority Queue (PQ), which supports search and deletion of minimum (or maximum)
+on a collection of items in logarithmic time (in worst case).
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
