@@ -3,8 +3,6 @@
 
 using namespace std;
 
-// This program introduces just to the basic structure of the tree
-
 struct node
 {
     int data;
@@ -57,7 +55,7 @@ void preorder_recursive(node *root)
 }
 
 void preorder_iterative(node * root ){
-    stack<node * > stk;
+    stack<node*> stk;
 
     while (1)
     {
@@ -68,15 +66,18 @@ void preorder_iterative(node * root ){
             root = root->left;
         }
         
-        while (!stk.empty())
+        if (stk.empty())
         {
-            stk.top();
-        }
-        
-        
+            break;
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+
+        root = stk.top();
+        stk.pop();
+
+        root = root->right;
+          
     }
     
-
 
 }
 int main()
@@ -117,6 +118,7 @@ int main()
 
     preorder_recursive(root);
     cout<<endl;
+    preorder_iterative(root);
 
     return 0;
 }
