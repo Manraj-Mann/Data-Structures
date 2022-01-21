@@ -133,10 +133,10 @@ information, linear data structures like linked lists, stacks, queues, etc. can 
 ## 1.Binary Trees
 A tree is called binary tree if each node has zero child, one child or two children. Empty tree is also a valid binary tree. We can visualize a binary tree as consisting of a root and two disjoint binary trees, called the left and right subtrees of the root.
 
-- [Structre of binary Trees]()
-- [Preorder Traversal]()
-- [Inorder Traversal]()
-- [Postorder Traversal]()
+- [Structre of binary Trees](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%206%20Trees/binary_trees.cpp)
+- [Preorder Traversal](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%206%20Trees/preorder_traversal.cpp)
+- [Inorder Traversal](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%206%20Trees/postorder_traversal.cpp)
+- [Postorder Traversal](https://github.com/Manraj-Mann/Data-Sructures/blob/main/Chapter%206%20Trees/preorder_traversal.cpp)
 
 > [Practise Questions with solutions (Including Interview Questions)]()  
 
