@@ -1,8 +1,7 @@
-// Give an algorithm for finding maximum element in binary tree.
+// Give an algorithm for finding the deepest node of the binary tree.
 
-#include <climits>
 #include <iostream>
-#include <stack>
+#include <queue>
 
 using namespace std;
 
@@ -32,53 +31,50 @@ void insert_right(node *root, int data)
 
 void delete_left(node *root)
 {
-
     node *todel = root->left;
     root->left = NULL;
     delete todel;
 }
 void delete_right(node *root)
 {
-
     node *todel = root->right;
     root->right = NULL;
     delete todel;
 }
 
-
-int findmax(node *root)
+int deepest(node *root)
 {
+    node * temp;
+    queue<node *> q;
 
-    int rootval, left, right, max = INT_MIN;
-
-    if (root != NULL)
+    if (root == NULL)
     {
-        rootval = root->data;
-        left = findmax(root->left);
-        right = findmax(root->right);
-        //   cout<<"left = "<<left<<endl;
-        //    cout<<"right = "<<right<<endl;
+        return;
+    }
 
-        if (left < right)
+    q.push(root);
+
+    while (!q.empty())
+    {
+        temp = q.front();
+        q.pop();
+
+        cout << temp->data << " ";
+
+        if (temp->left)
         {
-            max = right;
+            q.push(temp->left);
         }
-        else
+        if (temp->right)
         {
-
-            max = left;
-        }
-
-        if (rootval > max)
-        {
-            max = rootval;
+            q.push(temp->right);
         }
     }
 
-    // cout<<"returned "<<max<<endl;
-
-    return max;
+    return temp->data;
 }
+
+
 int main()
 {
     node *root = NULL;
@@ -112,7 +108,19 @@ int main()
     //      / \' / \'
     //     4   5 6  7
 
-    cout << "Max - " << findmax(root);
+
+    insert_left(root->right->left , 10);
+
+    //         1
+    //        / \'
+    //       2   3
+    //      / \' / \'
+    //     4   5 6  7
+    //          / 
+    //         10        
+
+    cout<<deepest(root)<<" ";
+
 
     return 0;
 }

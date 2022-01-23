@@ -1,8 +1,9 @@
-// Give an algorithm for finding maximum element in binary tree.
+// Give an algorithm for finding the size of binary tree.
 
 #include <climits>
 #include <iostream>
 #include <stack>
+#include <queue>
 
 using namespace std;
 
@@ -45,39 +46,50 @@ void delete_right(node *root)
     delete todel;
 }
 
+// Recursive
 
-int findmax(node *root)
+int sizeoftree(node *root)
 {
 
-    int rootval, left, right, max = INT_MIN;
-
-    if (root != NULL)
+    if (root == NULL)
     {
-        rootval = root->data;
-        left = findmax(root->left);
-        right = findmax(root->right);
-        //   cout<<"left = "<<left<<endl;
-        //    cout<<"right = "<<right<<endl;
+        return 0;
+    }
+    else
+    {
+        return sizeoftree(root->left) + 1 + sizeoftree(root->right);
+    }
+}
 
-        if (left < right)
-        {
-            max = right;
-        }
-        else
-        {
+// Iterative
 
-            max = left;
-        }
+int sizeoftree_(node * root){
 
-        if (rootval > max)
+    node *temp;
+    queue<node*> q;
+    int count = 0;
+
+    q.push(root);
+
+    while (!q.empty())
+    {
+        temp = q.front();
+        q.pop();
+        count++;
+        
+        if (temp->left != NULL)
         {
-            max = rootval;
+            q.push(temp->left);
         }
+        if (temp->right != NULL)
+        {
+            q.push(temp->right);
+        }    
     }
 
-    // cout<<"returned "<<max<<endl;
-
-    return max;
+    return count;
+    
+  
 }
 int main()
 {
@@ -112,7 +124,8 @@ int main()
     //      / \' / \'
     //     4   5 6  7
 
-    cout << "Max - " << findmax(root);
+    cout << "size = " << sizeoftree(root)<<endl;
+    cout << "size = " << sizeoftree_(root->left)<<endl;
 
     return 0;
 }

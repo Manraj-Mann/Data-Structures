@@ -1,4 +1,4 @@
-// Give an algorithm for finding maximum element in binary tree.
+// Give an algorithm for searching an element in binary tree.
 
 #include <climits>
 #include <iostream>
@@ -46,38 +46,39 @@ void delete_right(node *root)
 }
 
 
-int findmax(node *root)
+bool find(node * root , int data)
 {
+    bool temp;
 
-    int rootval, left, right, max = INT_MIN;
-
-    if (root != NULL)
+    if (root == NULL )
     {
-        rootval = root->data;
-        left = findmax(root->left);
-        right = findmax(root->right);
-        //   cout<<"left = "<<left<<endl;
-        //    cout<<"right = "<<right<<endl;
+        return 0;
+    }
+    else{
 
-        if (left < right)
-        {
-            max = right;
-        }
-        else
-        {
 
-            max = left;
-        }
-
-        if (rootval > max)
+        if (root->data == data)
         {
-            max = rootval;
+            return 1;
         }
+        else{
+
+            temp = find(root->left , data);
+            if (temp != 0)
+            {
+                return temp;
+            }
+            else{
+
+                return find(root->right , data);
+            }
+            
+        }
+        
     }
 
-    // cout<<"returned "<<max<<endl;
-
-    return max;
+    return 0;
+    
 }
 int main()
 {
@@ -112,7 +113,7 @@ int main()
     //      / \' / \'
     //     4   5 6  7
 
-    cout << "Max - " << findmax(root);
+    cout << "Found - " << find(root , 6);
 
     return 0;
 }

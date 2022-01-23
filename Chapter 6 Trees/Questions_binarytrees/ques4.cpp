@@ -1,8 +1,8 @@
-// Give an algorithm for finding maximum element in binary tree.
+// Give an algorithm for searching an element in binary tree without recursion.
 
 #include <climits>
 #include <iostream>
-#include <stack>
+#include <queue>
 
 using namespace std;
 
@@ -46,38 +46,34 @@ void delete_right(node *root)
 }
 
 
-int findmax(node *root)
+bool find(node * root , int data)
 {
+    node *temp;
+    queue<node *> q;
+    q.push(root);
 
-    int rootval, left, right, max = INT_MIN;
-
-    if (root != NULL)
+    while (!q.empty())
     {
-        rootval = root->data;
-        left = findmax(root->left);
-        right = findmax(root->right);
-        //   cout<<"left = "<<left<<endl;
-        //    cout<<"right = "<<right<<endl;
+        temp = q.front();
+        q.pop();
 
-        if (left < right)
+        if (data == temp->data)
         {
-            max = right;
-        }
-        else
-        {
-
-            max = left;
+            return 1;
         }
 
-        if (rootval > max)
+        if (temp->left != NULL)
         {
-            max = rootval;
+            q.push(temp->left);
+        }
+        if (temp->right != NULL)
+        {
+            q.push(temp->right);
         }
     }
 
-    // cout<<"returned "<<max<<endl;
-
-    return max;
+    return 0;
+    
 }
 int main()
 {
@@ -112,7 +108,7 @@ int main()
     //      / \' / \'
     //     4   5 6  7
 
-    cout << "Max - " << findmax(root);
+    cout << "Found - " << find(root , 6);
 
     return 0;
 }
