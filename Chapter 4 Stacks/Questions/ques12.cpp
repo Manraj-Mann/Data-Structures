@@ -21,13 +21,13 @@ int maxar(vector<int> &vec){
 
     for (int i = 0; i < vec.size(); i++)
     {
-        //cout<<" i = "<<i<<endl;
+        cout<<" i = "<<i<<endl;
 
-        while ( i < vec.size() &&(stk.empty() == 1) || vec[stk.top()] <= vec[i]) 
+        while ( i < vec.size() &&((stk.empty() == 1) || vec[stk.top()] <= vec[i])) 
         {
             left = i;
             stk.push(i);
-            //cout<<"pushed : "<<vec[stk.top()]<<endl;
+            cout<<"pushed : "<<vec[stk.top()]<<endl;
             i++;
         }
 
@@ -36,14 +36,18 @@ int maxar(vector<int> &vec){
         if (!stk.empty())
         {
             left = stk.top();
+            max = (i - left - 1) * h;
+        }
+        else{
+
+            left = 0;
+            max = (i - left) * h;
         }
 
-        max = (i - left - 1 ) * h;
 
+        cout<<"new area : "<<max<<endl;
 
-        //cout<<"new area : "<<max<<endl;
-
-        //cout<<"-------------------------------------\n";
+        cout<<"-------------------------------------\n";
 
         if(maxar < max){
 

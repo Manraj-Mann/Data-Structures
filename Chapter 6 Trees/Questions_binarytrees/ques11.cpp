@@ -1,4 +1,5 @@
-// Give an algorithm for finding the deepest node of the binary tree.
+// Given two binary trees, return true if they are structurally identical
+
 
 #include <iostream>
 #include <queue>
@@ -42,31 +43,22 @@ void delete_right(node *root)
     delete todel;
 }
 
-int deepest(node * root){
+bool is_similar(node * root1 , node * root2){
 
-    node * temp;
-
-    queue<node*> q;
-    q.push(root);
-
-    while (!q.empty())
+    if (root1 == NULL && root2 == NULL)
     {
-        temp = q.front();
-        q.pop();
-
-        if (temp->left != NULL)
-        {
-            q.push(temp->left);
-        }
-        if (temp->right != NULL)
-        {
-            q.push(temp->right);
-        }
-        
+        return 1;
     }
-    
 
-    return temp->data;
+    if (root1 == NULL || root2 == NULL )
+    {
+        return 0;
+    }
+
+
+    return (root1->data == root2->data) && is_similar(root1->left , root2->left) && is_similar(root1->right , root2->left); 
+    
+    
 }
 
 
@@ -103,22 +95,9 @@ int main()
     //      / \' / \'
     //     4   5 6  7
 
+    cout<<is_similar(root , NULL);
+    
 
-    insert_left(root->right->left , 10);
-
-    //         1
-    //        / \'
-    //       2   3
-    //      / \' / \'
-    //     4   5 6  7
-    //          / 
-    //         10        
-
-   // cout<<
-   int data =  deepest(root);
-   cout<<data;
-    //<<" ";
-
-
+ 
     return 0;
 }

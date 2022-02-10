@@ -1,4 +1,6 @@
-// Give an algorithm for finding the deepest node of the binary tree.
+// Give an algorithm for finding the number of full nodes in the binary tree without
+// using recursion.
+
 
 #include <iostream>
 #include <queue>
@@ -42,9 +44,10 @@ void delete_right(node *root)
     delete todel;
 }
 
-int deepest(node * root){
+int fullnodes(node * root){
 
     node * temp;
+    int full_count = 0;
 
     queue<node*> q;
     q.push(root);
@@ -53,6 +56,11 @@ int deepest(node * root){
     {
         temp = q.front();
         q.pop();
+
+        if (temp->left != NULL && temp->right != NULL)
+        {
+            full_count++;
+        }
 
         if (temp->left != NULL)
         {
@@ -66,7 +74,7 @@ int deepest(node * root){
     }
     
 
-    return temp->data;
+    return full_count;
 }
 
 
@@ -112,13 +120,10 @@ int main()
     //      / \' / \'
     //     4   5 6  7
     //          / 
-    //         10        
+    //         10       
 
-   // cout<<
-   int data =  deepest(root);
-   cout<<data;
-    //<<" ";
+    cout<<"full = "<<fullnodes(root); 
 
-
+ 
     return 0;
 }

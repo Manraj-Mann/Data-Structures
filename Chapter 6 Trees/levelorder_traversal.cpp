@@ -59,11 +59,11 @@ void levelorder(node *root)
     
         cout<<temp->data<<" ";
 
-        if (temp->left)
+        if (temp->left != NULL)
         {
             q.push(temp->left);
         }
-        if (temp->right)
+        if (temp->right != NULL)
         {
             q.push(temp->right);
         }
